@@ -7,15 +7,15 @@
 
 
 int main(){
-	int nb_p = 2;
-	int t_stock[2] = {2, 4};
-	int t_prix[2] = {50, 100};
-	struct produits prd = {
-		nb_p,
-		t_stock,
-		t_prix
-	};
 
+	int nb_p = 2;
+	int t_stock[2] = {2,4};
+	int t_prix[2] = {50,100};
+
+	struct produits prd = {nb_p,t_stock,t_prix};
+
+	nb_produits(prd);
+	valeur_globale(prd);
 	affiche_info_globale(prd);
 	affiche_info_detaillee(prd);
 

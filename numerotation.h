@@ -15,10 +15,10 @@ void affiche_numrt(struct numerotation numrt);
 void affiche_numrt_diz(struct numerotation numrt);
 
 //pour parcourir les numéros présent
-//int prochain_num(struct numerotation numrt, int num);
+int prochain_num(struct numerotation numrt, int num);
 
 //conversion indice <-> numéros
-//int num_from_ind(struct numerotation numrt, int ind);
-//int ind_from_num(struct numerotation numrt, int num);
+int num_from_ind(struct numerotation numrt, int ind);
+int ind_from_num(struct numerotation numrt, int num);
 
 #endif

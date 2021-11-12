@@ -11,8 +11,8 @@ struct disposition{
 };
 
 //affichage simple
-//void affiche_dispo_simple(struct disposition dispo);
-//void affiche_dispo_simple_num(struct disposition dispo, struct numerotation numrt);
+void affiche_dispo_simple(struct disposition dispo);
+void affiche_dispo_simple_num(struct disposition dispo, struct numerotation numrt);
 
 //affichage graphique
 //int nbc_elem_dispo(struct disposition dispo);

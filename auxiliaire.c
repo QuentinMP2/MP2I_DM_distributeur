@@ -11,6 +11,6 @@ void affiche_montant(int nb_centimes){
 	nb_centimes = nb_centimes/10;
 	int dcentimes = nb_centimes%10;
 	int ccentimes = nb_centimes/10;
-	printf("%d€%d%d", ccentimes, dcentimes, ucentimes); 
-}
+	printf("%d€%d%d",ccentimes,dcentimes,ucentimes);
 
+}

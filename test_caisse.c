@@ -8,8 +8,24 @@
 
 int main(){
 
-	printf("--- Il faut définir la fonction main dans le fichier test_caisse.c\n");
-	assert(false);
+	int t_pc[6] = {20,30,20,8,7,15};
+	struct caisse c = {t_pc};
+
+	printf("%d\n",solde(c));
+	
+	affiche_caisse(c);
+
+	int t_pc2[6] = {2,3,2,2,3,5};
+	struct caisse p = {t_pc2};
+
+	ajoute_caisse(c,p);
+	affiche_caisse(c);
+
+	//affiche_caisse(prend_monnaie());
+
+	printf("%d\n",caisse_suffit(c,9201));
+	rend_monnaie(c,4525);
+
 	
 	// 1 - créer des caisses
 

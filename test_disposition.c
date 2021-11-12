@@ -9,8 +9,20 @@
 
 
 int main(){	
-	printf("--- Il faut définir la fonction main dans le fichier test_disposition.c\n");
-	assert(false);
+	
+	// Numéros présents : 1 2 4 6 7 9 10 12 13 15 17 31 32
+	int nb_num = 33;
+	bool t_num[33] = {0,1,1,0,1,0,1,1,0,1,1,0,1,1,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1};
+	struct numerotation numrt = {nb_num,t_num};
+
+	int nb_rg = 4;
+	int t_rg [4] = {6,5,0,2};
+	struct disposition dispo = {nb_rg,t_rg};
+	affiche_dispo_simple(dispo);
+
+	affiche_dispo_simple_num(dispo,numrt);
+
+	
 
 	
 	// 1 - créer des dispositions
