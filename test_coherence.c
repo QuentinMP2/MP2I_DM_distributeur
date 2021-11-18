@@ -16,7 +16,12 @@ int main(){
 	bool t_num[33] = {0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1};
 	struct numerotation numrt = {nb_num,t_num};
 
-	printf("%d\n",coherence_numrt_prdts(numrt,prd));
+	int nb_num1 = 33;
+	bool t_num1[33] = {0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1};
+	struct numerotation numrt1 = {nb_num1,t_num1};
+
+	assert(coherence_numrt_prdts(numrt,prd));
+	assert(!coherence_numrt_prdts(numrt1,prd));
 
 
 	// Numéros présents : 1 2 4 6 7 9 10 12 13 15 17 31 32
@@ -28,7 +33,7 @@ int main(){
 	int t_rg [4] = {6,5,0,2};
 	struct disposition dispo = {nb_rg,t_rg};
 
-	printf("%d\n",coherence_numrt_dispo(numrt2,dispo));
+	assert(!coherence_numrt_dispo(numrt2,dispo));
 
 	// 1 - créer des structures de produits 
 	

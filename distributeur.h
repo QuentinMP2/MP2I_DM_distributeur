@@ -17,8 +17,8 @@ struct distributeur{
 	struct caisse c;	
 };
 
-//int selection_produit(struct distributeur d);
-//bool transaction (struct distributeur d);
+int selection_produit(struct distributeur d);
+bool transaction (struct distributeur d);
 
 
 #endif

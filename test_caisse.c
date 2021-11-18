@@ -11,20 +11,64 @@ int main(){
 	int t_pc[6] = {20,30,20,8,7,15};
 	struct caisse c = {t_pc};
 
-	printf("%d\n",solde(c));
+	assert(solde(c)==8305);
 	
 	affiche_caisse(c);
+	/*
+	L'appel affiche_caisse(c) doit afficher : 
+	pièce de 2€00 : 20
+	pièce de 1€00 : 30
+	pièce de 0€50 : 20
+	pièce de 0€20 : 8
+	pièce de 0€10 : 7
+	pièce de 0€05 : 15*/
 
 	int t_pc2[6] = {2,3,2,2,3,5};
 	struct caisse p = {t_pc2};
 
 	ajoute_caisse(c,p);
 	affiche_caisse(c);
+	/* L'appel affiche_caisse(c) doit afficher : (c'est à dire la somme des deux caisses):
+	pièce de 2€00 : 22
+	pièce de 1€00 : 33
+	pièce de 0€50 : 22
+	pièce de 0€20 : 10
+	pièce de 0€10 : 10
+	pièce de 0€05 : 20*/
 
-	//affiche_caisse(prend_monnaie());
 
-	printf("%d\n",caisse_suffit(c,9201));
+
+	assert(!caisse_suffit(c,9201));
+	assert(caisse_suffit(c,10));
+	assert(caisse_suffit(c,0));
+
 	rend_monnaie(c,4525);
+	/* L'appel affiche_rend_monnaie(c,4525) doit afficher :
+	une pièce de 2€00
+	une pièce de 2€00
+	une pièce de 2€00
+	une pièce de 2€00
+	une pièce de 2€00
+	une pièce de 2€00
+	une pièce de 2€00
+	une pièce de 2€00
+	une pièce de 2€00
+	une pièce de 2€00
+	une pièce de 2€00
+	une pièce de 2€00
+	une pièce de 2€00
+	une pièce de 2€00
+	une pièce de 2€00
+	une pièce de 2€00
+	une pièce de 2€00
+	une pièce de 2€00
+	une pièce de 2€00
+	une pièce de 2€00
+	une pièce de 2€00
+	une pièce de 2€00
+	une pièce de 1€00
+	une pièce de 0€20
+	une pièce de 0€05*/
 
 	
 	// 1 - créer des caisses

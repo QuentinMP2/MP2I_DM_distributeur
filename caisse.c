@@ -37,7 +37,7 @@ void affiche_caisse(struct caisse c){
 
 void ajoute_caisse( struct caisse c, struct caisse p){
 	//hyp : c et p sont des structures non vide 
-	//ajoute les pièces de c2 à c1
+	//ajoute les pièces de c à p
 	int i = 0;
 	while (i<6){
 		c.t_pc[i] = c.t_pc[i] + p.t_pc[i];
@@ -66,6 +66,13 @@ struct caisse prend_monnaie(){
 bool caisse_suffit(struct caisse c, int m){
 	//hyp : c est une structure non vide, m <= 0
 	//renvoie s'il est possible de constituer la somme m avec les pièces disponibles dans c
+	int j = 0;
+	int t_pc[6];
+	while (j<6){
+		t_pc[j] = c.t_pc[j];
+		j = j + 1; 
+	}
+
 	int i = 0;
 	while (i<6){
 		while (m>=val_pc[i] && c.t_pc[i]){
@@ -74,6 +81,11 @@ bool caisse_suffit(struct caisse c, int m){
 		} 
 		i = i + 1;
 		
+	}
+	int t = 0;
+	while (t<6){
+		c.t_pc[t] = t_pc[t];
+		t = t + 1; 
 	}
 	return (m == 0);
 }

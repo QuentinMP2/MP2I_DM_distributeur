@@ -41,7 +41,6 @@ bool coherence_numrt_dispo(struct numerotation numrt, struct disposition dispo){
 			}
 			j=j+1;
 		}
-		printf("i = %d | j = %d |somme = %d | dispo.t_rg[i] = %d\n",i,j,somme,dispo.t_rg[i-1]);
 		if (!(somme == dispo.t_rg[i-1])){
 			return 0;
 		} 

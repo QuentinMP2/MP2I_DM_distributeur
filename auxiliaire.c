@@ -14,3 +14,10 @@ void affiche_montant(int nb_centimes){
 	printf("%d€%d%d",ccentimes,dcentimes,ucentimes);
 
 }
+
+bool convertisseur(char reponse){
+	if (reponse == 'o'){
+		return 1;
+	}
+	return 0;
+}
